@@ -1,6 +1,6 @@
 {
-  "name": "Message Bar",
-  "description": "Show a Message bar on top of your site",
+  "name": "Segment",
+  "description": "Install Segment in your site",
   "picture": "picture.png",
   "index": "ship.js",
   "version": "0.0.1",
@@ -17,137 +17,15 @@
       "default"    : "append",
       "type"       : "string",
       "format"     : "string"
-    },
-    {
-      "name"       : "whitelist",
-      "title"      : "Filter URLs",
-      "description" : "Display bar only on these URLs",
-      "type"       : "array",
-      "format"     : "table",
-      "items"      : {
-        "type"     : "string",
-        "format"   : "text",
-        "title"    : "URL"
-      }
-    },
-    {
-      "name"       : "referrers",
-      "title"      : "Referrers",
-      "description" : "Display bar only when customer comes from these sites (Regex accepted)",
-      "type"       : "array",
-      "format"     : "table",
-      "items"      : {
-        "type"     : "string",
-        "format"   : "text",
-        "title"    : "URL"
-      }
     }
   ],
   "settings": [
     {
-      "name":"appearance",
-      "type":"object",
-      "properties":{
-        "background_color"  : {
-          "title"      : "Background",
-          "type"       : "string",
-          "format"     : "color",
-          "default"    : "#0093e6"
-        },
-        "text_color"        : {
-          "title"      : "Text",
-          "type"       : "string",
-          "format"     : "color",
-          "default"    : "#FFFFFF"
-        },
-        "button_color"      : {
-          "title"      : "Button",
-          "type"       : "string",
-          "format"     : "color",
-          "default"    : "#FFFFFF"
-        },
-        "button_text_color" : {
-          "title"      : "Button Text",
-          "type"       : "string",
-          "format"     : "color",
-          "default"    : "#0093e6"
-        },
-        "opacity"   : {
-          "title"      : "Opacity",
-          "type"       : "number",
-          "format"     : "range",
-          "default"    : 1,
-          "maximum"    : 1,
-          "minimum"    : 0,
-          "multipleOf" : 0.05
-        },
-        "font_family": {
-          "title"      : "Font Family",
-          "type"       : "string",
-          "enum"       : ["Open Sans", "Helvetica", "Georgia", "sans-serif"],
-          "default"    : "Helvetica"
-        },
-        "animation" : {
-          "title"      : "Appear Animation",
-          "type"       : "string",
-          "enum"       : ["fade", "fade_down", "bounce", "none"],
-          "default"    : "fade_down"
-        }
-      }
-    },
-    {
-      "name":"content",
-      "title": "Content",
-      "type":"object",
-      "properties":{
-        "link_url" : {
-          "title"      : "Link URL",
-          "type"       : "string",
-          "format"     : "text" 
-        },
-        "new_window": {
-          "title"      : "Open link in new window",
-          "type"       : "boolean",
-          "default"    : true
-        }
-      }
-    },
-    {
-      "name":"behaviour",
-      "title": "Behaviour",
-      "type":"object",
-      "properties":{
-        "allow_hide"    : {
-          "title"      : "Allow to hide bar",
-          "type"       : "boolean",
-          "default"    : false
-        },
-        "pushes_down"    : {
-          "title"      : "Push Page down",
-          "type"       : "boolean",
-          "default"    : false
-        },
-        "fixed_position" : {
-          "title"      : "Remains in place",
-          "type"       : "boolean",
-          "default"    : true
-        },
-        "placement"      : {
-          "title"      : "Placement",
-          "type"       : "string",
-          "enum"       : ["top","bottom"],
-          "default"    : "top"
-        },
-        "delay"          : {
-          "title"      : "Display Delay (in seconds)",
-          "type"       : "number",
-          "format"     : "range",
-          "default"    : 0,
-          "maximum"    : 60,
-          "minimum"    : 0,
-          "multipleOf" : 2
-        }
-      }
+      "name":"project_id",
+      "title": "Segment ID",
+      "description":"Segment Code, found in Project Settings > API Keys",
+      "type": "string",
+      "format": "text"
     }
   ],
   "resources": []
